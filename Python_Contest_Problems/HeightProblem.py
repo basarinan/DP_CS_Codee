@@ -1,26 +1,9 @@
-file = open("Tallest.txt","r")
-height = list()
-names = list()
-metric = list()
-
-newlst = list()
-file.readline()
-for line in file:
-	newlst = line.replace("\n"," ").split(" ")
-	names.append(newlst[0])
-	height.append(newlst[1])
-	metric.append(newlst[2])
-
-
-
-
-
-allmeters = list()
-
 def convertmeters(h,u):
+	allmeters = list()
 	
 	
 	for i in range(len(u)):
+		
 		
 		if u[i] == "m":
 		
@@ -41,6 +24,28 @@ def convertmeters(h,u):
 			allmeters.append(h[i])
 	return allmeters
 convertmeters(height,metric)
+
+file = open("Tallest.txt","r")
+height = list()
+names = list()
+metric = list()
+
+newlst = list()
+
+for line in file:
+	newlst = line.replace("\n"," ").split(" ")
+	names.append(newlst[0])
+	height.append(newlst[1])
+	metric.append(newlst[2])
+
+
+
+
+
+
+
+
+
 
 
 dictionary = dict()
