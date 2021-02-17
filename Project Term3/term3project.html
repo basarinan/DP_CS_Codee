@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+      <!--This part will have the development of the physical features-->
+
+      <div class="indigo lighten-2 nav-wrapper">
+     
+        
+          <a href="#" class="brand-logo">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="modal-login" id ="login_nav">Log In</a></li>
+            
+            <li><a href="aboutme.html" id ="myinfo">About Me</a></li>
+            <li><a href="coding.html">Coding History</a></li>
+            <li><a href="images.html">Images</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      
+
+
+
+      <!--This part will contain the algorithmic thinking and functions including the firebase database-->
+  <pre id = "object">
+
+  </pre>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCBvxfQxkzA4Z9_FFBHH5nFItQmF5M5ACg",
+    authDomain: "project-database-4fc60.firebaseapp.com",
+    databaseURL: "https://project-database-4fc60-default-rtdb.firebaseio.com",
+    projectId: "project-database-4fc60",
+    storageBucket: "project-database-4fc60.appspot.com",
+    messagingSenderId: "145330664958",
+    appId: "1:145330664958:web:19dcd1d0620318ffb8fcaf"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  const preObject = document.getElementById('object');
+
+  const RefObject = firebase.database().ref().child('object');
+
+  RefObject.on('value', snapshot => console.log(snapshot.val()));
+
+  
+  
+  </script>
+
+
+  
+
+
+
+  
+</body>
+
+
+</html>
